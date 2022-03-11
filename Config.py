@@ -23,5 +23,4 @@ else:
     DATABASE_URL = ""
     DATABASE_URL = DATABASE_URL.replace("postgres", "postgresql")
     MUST_JOIN = ""
-    if MUST_JOIN.startswith("@"):
-        MUST_JOIN = MUST_JOIN[1:]
+    MUST_JOIN = MUST_JOIN.removeprefix("@")
